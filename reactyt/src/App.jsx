@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Card from "./components/Card";
+import Ex from "./components/Ex";
 
 // const App=()=>{
 
@@ -104,11 +106,244 @@ import React, { useState } from "react";
 //*******************  *********************/
 
 
+// const App = () => {
+//   return (
+//     <div>
+//       <h2>Hello guys</h2>
+//       <h1> Jai mata di </h1>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+/********** form handling ********************/
+
+// const App = () => {
+//   const submitHandler=(e)=>{
+//     e.preventDefault()           // is se page reload nahi ho rh hai.
+//     console.log("submitted");
+    
+    
+//   }
+//   return (
+//     <div>
+//     <form onSubmit={(e)=>{   // form handling sikh gaya hu 
+//       submitHandler(e)
+//     }}>
+//       <input placeholder="Enter your name " className="px-4 py-3 text-xl m-5 rounded text-black "/>
+//       <button className=" text-white px-4 py-3 text-xl font-semibold bg-green-700 rounded m-5">Submit</button>
+//     </form>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+/*********************Two way Binding ************/
+
+// const App = () => {
+  // const submitHandler=(e)=>{
+  //   e.preventDefault()           // is se page reload nahi ho rh hai.
+  //   console.log("submitted"); 
+// }
+
+// const [username, setusername] = useState('')
+
+
+// const submitHandler = (e)=>{
+//   // console.log("Submitted")
+//   e.preventDefault()
+//   // console.log('submit ho rh hai ');
+//   console.log(username);
+//   setusername('')
+  
+// }
+//   return (
+//     <div>   
+//     <form onSubmit={(e)=>{
+//       submitHandler(e)
+//     }}>
+//       <input value={username}
+//       onChange={(e)=>{setusername(e.target.value)
+//       }}
+//       placeholder="Enter your name " className="px-4 py-3 text-xl m-5 rounded text-black "/>
+//       <button className=" text-white px-4 py-3 text-xl font-semibold bg-green-700 rounded m-5">Submit</button>
+//     </form>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// /************ Components*********/
+// import Header from "./components/Header";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
+
+// const App = () => {
+//   return (
+//     <>
+//     <Header/>
+//     <Navbar/>
+//     <Footer/>
+//     <nav className="bg-emerald-950 flex py-5 px-10 items-center justify-between">
+//       <h2 className="text-2xl">Pankaj Yadav</h2>
+//       <div className="flex gap-8 items-center">
+//         <h4 className="text-xl">About</h4>
+//         <h4 className="text-xl">Contact</h4>
+//         <h4 className="text-xl">Services</h4>
+//         <h4 className="text-xl">Your Account</h4>
+//       </div>
+//     </nav>
+    
+//     </>
+//   )
+// }
+
+// export default App
+
+// const App = () => {
+ 
+//   // const num = 10;
+
+//   const users=
+//     [
+//       {
+//         "name": "Pankaj",
+//         "surname": "Yadav",
+//         "city": "Gwalior",
+//         "age": 25,
+//         "profession": "Web Developer",
+//         "profile": "https://example.com/pankaj-profile"
+//       },
+//       {
+//         "name": "Priya",
+//         "surname": "Yadav",
+//         "city": "Lucknow",
+//         "age": 22,
+//         "profession": "Graphic Designer",
+//         "profile": "https://example.com/priya-profile"
+//       },
+//       {
+//         "name": "Amit",
+//         "surname": "Yadav",
+//         "city": "Indore",
+//         "age": 28,
+//         "profession": "Software Engineer",
+//         "profile": "https://example.com/amit-profile"
+//       },
+//       {
+//         "name": "Nidhi",
+//         "surname": "Yadav",
+//         "city": "Delhi",
+//         "age": 30,
+//         "profession": "Content Writer",
+//         "profile": "https://example.com/nidhi-profile"
+//       },
+//       {
+//         "name": "Rohan",
+//         "surname": "Yadav",
+//         "city": "Pune",
+//         "age": 26,
+//         "profession": "Data Analyst",
+//         "profile": "https://example.com/rohan-profile"
+//       }
+//     ]
+    
+//   users.forEach(function(){
+
+//   })
+
+
+
+//   return (
+//     <>
+//     {/* <Card  a={"pankaj"}/>
+//     <Card  a={"py"}/> */}
+//    <div className="p-10">
+//    {/* <Card user="Pankaj" surname="Yadav" age='69' city="Bhopal"/> */}
+//    {users.map(function(elem,idx){
+//     return <Card key={idx} username={elem.name} surname={elem.surname} age={elem.age} city={elem.city} profession={elem.profession} profile={elem.profile}/>
+//    })}
+//    </div>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+/********************New  ********/
+
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Ex name="Pankaj"/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+/************** context api (axios) */
+
+// import axios from 'axios'
+
+// const App = () => {
+
+//   const [data, setData] = useState([])
+
+//   // const [a, setA] = useState("py") 
+
+//   const getData = async ()=>{
+//    const response = await axios.get('https://picsum.photos/v2/list')
+//   //  console.log(response);
+//   // const data = response.data
+//   //  console.log(data);
+//    setData(response.data)
+//    console.log(data);
+   
+//   };
+
+//   useEffect(()=>{
+//     getData()
+//   })
+      
+    
+  
+//   return (
+//     <div className="p-10">
+//       {/* <button onClick={getData} className="bg-emerald-600 text-white font-semibold text-2xl px-6 py-3 rounded active:scale-90">Get Data</button> */}
+// <div className="p-5 mt-5 bg-gray-900">
+//   {data.map(function(elem,idx){
+
+//     return <div key={idx} className="bg-green-50 text-black flex items-center justify-between w-full px-7">
+//         <img className="h-40" src={elem.download_url} alt="" />
+//         <h1>{elem.author}</h1>
+//     </div>
+//   })}
+// </div>
+//     </div>
+//   )
+// }
+
+// export default App
+
+/******** Router Dom ***********/
+
+
+
 const App = () => {
   return (
     <div>
-      <h2>Hello guys</h2>
-      <h1> Jai mata di </h1>
+      
     </div>
   )
 }
