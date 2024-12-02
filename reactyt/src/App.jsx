@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Card from "./components/Card";
 import Ex from "./components/Ex";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Product from "./pages/Product";
+import About from "./pages/About";
+
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
 
 // const App=()=>{
 
@@ -343,7 +350,16 @@ import Ex from "./components/Ex";
 const App = () => {
   return (
     <div>
-      
+      {/* <h1>Hello</h1> */}
+      <Header/>
+
+    <Routes>
+    
+      <Route path='/About' element={<About/>} />
+      <Route path='/Product' element={<Product/>} />
+      <Route path='/' element={<Home/>} />
+      <Route path='/Contact' element={<Contact/>} />
+    </Routes>
     </div>
   )
 }
